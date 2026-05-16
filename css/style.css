@@ -283,14 +283,13 @@ a {
 .works-past {
     font-size: 8pt;
     letter-spacing: 0.2em;
-    color: rgba(255, 255, 255, 0.6);
+    color: #ffffff;
     transition: opacity 0.2s;
     text-transform: lowercase;
 }
 
 .works-past:hover {
     opacity: 0.5;
-    color: #ffffff;
 }
 
 /* ---- Post ---- */
