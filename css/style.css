@@ -284,8 +284,9 @@ a {
     font-size: 8pt;
     letter-spacing: 0.2em;
     color: #ffffff;
-    transition: opacity 0.2s;
     text-transform: lowercase;
+    animation: arrowFlow 2s ease-in-out infinite;
+    animation-delay: 0.5s;
 }
 
 .works-past:hover {
