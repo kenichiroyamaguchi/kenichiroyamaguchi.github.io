@@ -33,12 +33,12 @@
 <!-- Works Section -->
 <div id="works-section">
     <div id="layout">
-        <div class="works-label">works<br>
-            <span class="works-arrow">
-                <span class="arrow-line">↓</span>
-                <span class="arrow-line">↓</span>
-                <span class="arrow-line">↓</span>
-            </span>
+        <div class="works-label">
+            works
+            <div class="works-nav">
+                <span class="works-down">↓</span>
+                <a class="works-past" href="#" onclick="if(currentPage<totalPages){renderPage(currentPage+1);window.scrollTo(0,0);}return false;">past →</a>
+            </div>
         </div>
         <div class="pagination" id="pagination-top"></div>
         <div id="posts"></div>
