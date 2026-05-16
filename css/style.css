@@ -285,8 +285,10 @@ a {
     letter-spacing: 0.2em;
     color: #ffffff;
     text-transform: lowercase;
-    animation: arrowFlow 2s ease-in-out infinite;
-    animation-delay: 0.5s;
+}
+
+.works-past:hover {
+    opacity: 0.5;
 }
 
 .works-past:hover {
