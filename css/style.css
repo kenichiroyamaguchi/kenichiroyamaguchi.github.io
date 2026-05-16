@@ -447,6 +447,12 @@ footer {
     max-width: 100%;
     margin: 0 auto 60px;
     padding: 0 25px 20px;
+    text-align: center;
+}
+
+.about-text {
+    display: inline-block;
+    text-align: left;
 }
 
 .page-post h1 {
@@ -505,7 +511,6 @@ footer {
     .page-post {
         width: 100%;
         padding: 0 20px 20px;
-        text-align: center;
     }
 
     #layout {
