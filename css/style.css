@@ -250,8 +250,8 @@ a {
 /* ---- Works label ---- */
 .works-label {
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 15px;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 9pt;
     font-weight: 300;
@@ -378,7 +378,7 @@ a {
 /* ---- Pagination ---- */
 .pagination {
     text-align: center;
-    padding: 10px 20px 30px;
+    padding: 5px 20px 15px;
     letter-spacing: 0.2em;
     display: flex;
     align-items: center;
