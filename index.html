@@ -40,6 +40,7 @@
                 <span class="arrow-line">↓</span>
             </span>
         </div>
+        <div class="pagination" id="pagination-top"></div>
         <div id="posts"></div>
     </div>
     <div class="pagination" id="pagination"></div>
@@ -1089,6 +1090,7 @@ let currentPage = 1;
 const totalPages = Math.ceil(projects.length / ITEMS_PER_PAGE);
 const postsEl = document.getElementById('posts');
 const paginationEl = document.getElementById('pagination');
+const paginationTopEl = document.getElementById('pagination-top');
 
 function renderPost(p) {
     const article = document.createElement('article');
@@ -1151,29 +1153,31 @@ function renderPage(page) {
     slice.forEach(p => postsEl.appendChild(renderPost(p)));
 
     // Pagination controls
-    paginationEl.innerHTML = '';
+    [paginationEl, paginationTopEl].forEach(el => {
+        el.innerHTML = '';
 
-    const prev = document.createElement('a');
-    prev.className = 'pg-prev';
-    prev.textContent = '← prev';
-    prev.style.visibility = page > 1 ? 'visible' : 'hidden';
-    prev.onclick = () => { renderPage(page - 1); window.scrollTo(0, 0); };
-    paginationEl.appendChild(prev);
+        const prev = document.createElement('a');
+        prev.className = 'pg-prev';
+        prev.textContent = '← prev';
+        prev.style.visibility = page > 1 ? 'visible' : 'hidden';
+        prev.onclick = () => { renderPage(page - 1); window.scrollTo(0, 0); };
+        el.appendChild(prev);
 
-    getPageNumbers(page, totalPages).forEach(n => {
-        const a = document.createElement('a');
-        a.textContent = n;
-        if (n === page) a.className = 'active';
-        a.onclick = () => { renderPage(n); window.scrollTo(0, 0); };
-        paginationEl.appendChild(a);
+        getPageNumbers(page, totalPages).forEach(n => {
+            const a = document.createElement('a');
+            a.textContent = n;
+            if (n === page) a.className = 'active';
+            a.onclick = () => { renderPage(n); window.scrollTo(0, 0); };
+            el.appendChild(a);
+        });
+
+        const next = document.createElement('a');
+        next.className = 'pg-next';
+        next.textContent = 'next →';
+        next.style.visibility = page < totalPages ? 'visible' : 'hidden';
+        next.onclick = () => { renderPage(page + 1); window.scrollTo(0, 0); };
+        el.appendChild(next);
     });
-
-    const next = document.createElement('a');
-    next.className = 'pg-next';
-    next.textContent = 'next →';
-    next.style.visibility = page < totalPages ? 'visible' : 'hidden';
-    next.onclick = () => { renderPage(page + 1); window.scrollTo(0, 0); };
-    paginationEl.appendChild(next);
 }
 
 renderPage(1);
