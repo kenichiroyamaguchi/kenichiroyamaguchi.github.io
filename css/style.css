@@ -117,6 +117,12 @@ a {
     100% { color: #ffffff; }
 }
 
+@keyframes skeletonPulse {
+    0%   { -webkit-text-stroke-color: #ffffff; }
+    50%  { -webkit-text-stroke-color: #cdecff; }
+    100% { -webkit-text-stroke-color: #ffffff; }
+}
+
 /* ---- Header ---- */
 .salvia-header {
     text-align: center;
@@ -160,9 +166,11 @@ a {
 }
 
 .salvia-title a {
-    color: #ffffff;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    font-family: Helvetica, Arial, sans-serif;
     border-bottom: 0;
-    animation: headerColorPulse 10s ease-in-out infinite;
+    animation: skeletonPulse 10s ease-in-out infinite;
 }
 
 .salvia-description {
