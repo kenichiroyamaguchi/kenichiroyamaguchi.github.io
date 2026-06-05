@@ -127,7 +127,7 @@ a {
 .salvia-header {
     text-align: center;
     margin: auto;
-    padding: 110px 40px;
+    padding: 200px 40px;
     position: relative;
     overflow: hidden;
 }
@@ -518,7 +518,7 @@ footer {
 
 @media (max-width: 600px) {
     .salvia-header {
-        padding: 60px 30px;
+        padding: 120px 30px;
     }
 
     .post-content {
