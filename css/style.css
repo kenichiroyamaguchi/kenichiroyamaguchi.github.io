@@ -283,8 +283,12 @@ a {
 }
 
 .works-down {
-    font-size: 32pt;
-    letter-spacing: 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    transform: rotate(45deg);
     animation: arrowFlow 2s ease-in-out infinite;
 }
 
