@@ -283,7 +283,7 @@ a {
 }
 
 .works-down {
-    font-size: 20pt;
+    font-size: 32pt;
     letter-spacing: 0;
     animation: arrowFlow 2s ease-in-out infinite;
 }
