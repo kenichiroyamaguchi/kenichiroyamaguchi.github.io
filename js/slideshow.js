@@ -23,11 +23,11 @@
 
     var images = files.map(function (f) { return 'images/header/' + f; });
 
-    // Preload all images
-    images.forEach(function (src) {
+    // Preload only the next image (keeps first paint fast)
+    function preload(src) {
         var img = new Image();
         img.src = src;
-    });
+    }
 
     var header = document.querySelector('.salvia-header');
 
@@ -50,12 +50,14 @@
     var front = bgA, back = bgB;
 
     if (images.length > 1) {
+        preload(images[1]);
         setInterval(function () {
             index = (index + 1) % images.length;
             back.style.backgroundImage = "url('" + images[index] + "')";
             back.classList.add('active');
             front.classList.remove('active');
             var tmp = front; front = back; back = tmp;
+            preload(images[(index + 1) % images.length]);
         }, 10000);
     }
 })();
