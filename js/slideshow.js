@@ -11,7 +11,8 @@
         "DSC09534 コピー.jpeg","L1000092.jpg","L1000357.jpg","L1020393.jpeg",
         "L1030932.jpg","L1040091.jpg","L1040128.jpg","L1050935.jpeg","L1060126.jpeg",
         "L1080298.jpeg","L1090924.jpg","L1100695.jpg","L1120743.jpg","L1120805.jpeg",
-        "L1130115.jpeg","awasasyouten3.jpeg","kunel-1.jpg","kurasobi_2025_04.jpeg"
+        "L1130115.jpeg","awasasyouten3.jpeg","kunel-1.jpg","kurasobi_2025_04.jpeg",
+        "2409259825.jpg"
     ];
 
     // Fisher-Yates shuffle
