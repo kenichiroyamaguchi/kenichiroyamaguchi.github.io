@@ -457,10 +457,6 @@ footer {
     box-shadow: none;
 }
 
-.page-post-wrap .page-post p,
-.page-post-wrap .page-post h1 {
-    color: #ffffff;
-}
 
 .page-post {
     width: 500px;
@@ -496,7 +492,7 @@ footer {
 
 .page-post .section-label {
     font-size: 8.5pt;
-    color: #aaa;
+    color: #666666;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     margin-top: 32px;
